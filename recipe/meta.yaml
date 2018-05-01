@@ -14,22 +14,15 @@ source:
     - {{ cran_mirror }}/src/contrib/Archive/SnowballC/SnowballC_{{ version }}.tar.gz
   sha256: 44170624fd906ecc67959fed5dbf80068b59b1b2a6fbab65da5054e3e1186f4d
 
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
-
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
 
-
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
-
 
 requirements:
   build:
